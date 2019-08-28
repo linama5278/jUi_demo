@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>jQuery UI Ui-State</title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="Base/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="Base/jquery-ui.min.css" data-theme="theme">
+	<link rel="stylesheet" type="text/css" href="Base/jquery-ui.structure.min.css" data-theme="theme">
+	<link rel="stylesheet" type="text/css" href="Base/jquery-ui.theme.min.css" data-theme="theme">
+</head>
+<body>
+	<div class="container">
+		<div class="group">
+			<div class="button" data-theme="base">基礎</div>
+			<div class="button" data-theme="lightness">明亮</div>
+			<div class="button" data-theme="darkness">暗沉</div>
+			<div class="button" data-theme="smoothness">滑順</div>
+			<div class="button" data-theme="start">創始</div>
+			<div class="button" data-theme="redmond">現代</div>
+			<div class="button" data-theme="sunny">陽光</div>
+			<div class="button" data-theme="overcast">霧濛</div>
+			<div class="button" data-theme="lefrog">青蛙</div>
+			<div class="button" data-theme="flick">福客</div>
+			<div class="button" data-theme="pepper">胡椒</div>
+			<div class="button" data-theme="eggplant">茄子</div>
+			<div class="button" data-theme="darkhive">黑潮</div>
+			<div class="button" data-theme="cupertino">假期</div>
+			<div class="button" data-theme="southstreet">鄉村</div>
+			<div class="button" data-theme="blitzer">潮流</div>
+			<div class="button" data-theme="humanity">人性</div>
+			<div class="button" data-theme="hotsneaks">熱門</div>
+			<div class="button" data-theme="excitebike">競速</div>
+			<div class="button" data-theme="vader">反派</div>
+			<div class="button" data-theme="dotluv">數位</div>
+			<div class="button" data-theme="mintchoc">爽脆</div>
+			<div class="button" data-theme="blacktie">紳士</div>
+			<div class="button" data-theme="trontastic">科幻</div>
+			<div class="button" data-theme="swankypurse">尊爵</div>
+		</div>
+		<h3 class="ui-state-default ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-default</h3>
+		<h3 class="ui-state-disabled ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-disabled</h3>
+		<h3 class="ui-state-active ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-active</h3>
+		<h3 class="ui-state-focus ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-focus</h3>
+		<h3 class="ui-state-highlight ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-highlight</h3>
+		<h3 class="ui-state-error ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-error</h3>
+		<h3 class="ui-widget-header ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-widget-header</h3>
+		<h3 class="ui-widget-content ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-widget-content</h3>
+		<div id="open" class="ui-button ui-corner-all ui-widget-shadow">對話視窗<span class="ui-icon ui-icon-newwin"></span></div>
+		<div id="dialog" title="對話視窗標題">示範內容</div>
+	</div>
+	<script type = "text/javascript">
+		$(function() {
+			$("#dialog").dialog({
+				modal: true,
+				autoOpen: false,
+				buttons: {
+					"確定": function() {
+						$(this).dialog("close");
+					}
+				},
+				shadow: true,
+			});
+			$("#open").click(function() {
+				$("#dialog").dialog("open");
+			});
+			$(".button").click(function() {
+				$(".button").map(function() {
+					$(this).removeClass("btn-active");
+				});
+				$(this).toggleClass("btn-active");
+				var theme = $(this).data("theme");
+				$(document).find("link").map(function(){
+					if($(this).data("theme") == "theme"){
+						var temp = $(this).attr("href");
+						var file = temp.split("/");
+						$(this).attr("href", theme + "/" + file[1]);
+					}
+				});
+			});
+		});		
+	</script>
+</body>
+</html>
