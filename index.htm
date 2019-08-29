@@ -67,9 +67,9 @@
 				shadow: true,
 			});
 			$("#theme").selectmenu({
+				width: 120,
 				change: function( event, ui ) {
 					var theme = $(this).val();
-					debugger;
 					$(document).find("link").map(function(){
 						if($(this).data("theme") == "theme"){
 							var temp = $(this).attr("href");
