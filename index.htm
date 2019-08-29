@@ -67,7 +67,7 @@
 				shadow: true,
 			});
 			$("#theme").selectmenu({
-				width: 120,
+				width: 130,
 				change: function( event, ui ) {
 					var theme = $(this).val();
 					$(document).find("link").map(function(){
@@ -78,7 +78,9 @@
 						}
 					});
 				}
-			});
+			})
+			.selectmenu("menuWidget")
+			.addClass("overflow");
 			$("#open").click(function() {
 				$("#dialog").dialog("open");
 			});
