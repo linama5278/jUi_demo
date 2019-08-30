@@ -41,15 +41,16 @@
 			<option value="trontastic">科幻</option>
 			<option value="swankypurse">尊爵</option>
 		</select>
-		<div class="ui-widget" style="margin-bottom: 1em;">
+		<div class="ui-widget">
 			<h3 class="ui-state-default ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-default</h3>
-			<h3 class="ui-state-disabled ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-disabled</h3>
+			<h3 class="ui-state-default ui-state-disabled ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-disabled</h3>
 			<h3 class="ui-state-active ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-active</h3>
 			<h3 class="ui-state-hover ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-hover</h3>
 			<h3 class="ui-state-highlight ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-highlight</h3>
 			<h3 class="ui-state-error ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-error</h3>
 			<h3 class="ui-widget-header ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-widget-header</h3>
 			<h3 class="ui-widget-content ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-widget-content</h3>
+			<h4 id="progressbar" style="height: 1em;"></h4>
 			<div id="open" class="ui-button ui-corner-all ui-widget-shadow">對話視窗<span class="ui-icon ui-icon-newwin"></span></div>
 			<div id="dialog" title="對話視窗標題">內文通常要寫很多字吧？可是我不知道要寫什麼又懶得去網路上找文章，還是都不要寫字好了，可是我已經打了很多字了，姑且就讓它當範例文本吧！</div>
 		</div>
@@ -83,6 +84,9 @@
 			.addClass("overflow");
 			$("#open").click(function() {
 				$("#dialog").dialog("open");
+			});
+			$("#progressbar").progressbar({
+				value: false
 			});
 		});		
 	</script>
