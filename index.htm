@@ -41,6 +41,7 @@
 			<option value="trontastic">科幻</option>
 			<option value="swankypurse">尊爵</option>
 			<option value="retro">地鐵</option>
+			<option value="material">原件</option>
 		</select>
 		<div class="ui-widget">
 			<h3 class="ui-state-default ui-corner-all"><span class='ui-icon ui-icon-bullet'></span>ui-state-default</h3>
@@ -58,6 +59,7 @@
 				<p><span class="ui-state-default ui-corner-left" style="padding:1px 8px;"><span class="ui-icon ui-icon-person"></span>帳號</span><input type="text" class="ui-corner-right ui-widget-content" placeholder="User ID" style="width:200px;" /></p>
 				<p><span class="ui-state-default ui-corner-left" style="padding:1px 8px;"><span class="ui-icon ui-icon-key"></span>密碼</span><input type="password" class="ui-corner-right ui-widget-content" placeholder="Password" style="width:200px;" /></p>
 			</div>
+			<p>Date: <input type="text" id="datepicker"></p>
 		</div>
 	</div>
 	<script type = "text/javascript">
@@ -94,6 +96,7 @@
 			$("#progressbar").progressbar({
 				value: false
 			});
+			$("#datepicker").datepicker();
 		});		
 	</script>
 </body>
