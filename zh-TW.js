@@ -30,6 +30,7 @@ datepicker.regional[ "zh-TW" ] = {
 	isRTL: false,
 	showMonthAfterYear: true,
 	showButtonPanel: true,
+	showOtherMonths: true,
 	yearSuffix: "年" };
 datepicker.setDefaults( datepicker.regional[ "zh-TW" ] );
 
