@@ -1,0 +1,53 @@
+{
+	"id": "20190001",
+	"date": "2019/12/27",
+	"user": "abc",
+	"category": "3",
+	"moreteam": true,
+	"organizer": "教育部",
+	"competition": "大專院校超級金孤杯",
+	"teamname": "我要得第一",
+	"workname": "Automatic-自然而燃",
+	"compgroup": "化學組",
+	"comptyep": "2",
+	"win": false,
+	"rank": "優選",
+	"hasrank": true,
+	"startdate": "2019/11/1",
+	"enddate": "2019/11/29",
+	"teachers": {
+		"teacher1": {
+			"userid": "lxl",
+			"name": "李老師",
+			"dept": "生技系"
+		},
+		"teacher2": {
+			"userid": "sls",
+			"name": "史老師",
+			"dept": "資管系"
+		}
+	},
+	"teach": true,
+	"students": {
+		"student1": {
+			"studentid": "4A501022",
+			"name": "李自強",
+			"dept": "生技系"
+		},
+		"student2": {
+			"userid": "4A501112",
+			"name": "吳大同",
+			"dept": "生技系"
+		},
+		"student3": {
+			"userid": "4A609158",
+			"name": "蔡一心",
+			"dept": "資管系"
+		},
+		"student4": {
+			"userid": "4A501104",
+			"name": "李一三",
+			"dept": "生技系"
+		}
+	}
+}
